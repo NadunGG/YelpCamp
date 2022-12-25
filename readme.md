@@ -1,3 +1,6 @@
+---
+marp: true
+---
 # Yelp Camp - Practice Project
 This is the Core Project of the Udemy Course - Web Developer's BootCamp by Colt Steele
 
