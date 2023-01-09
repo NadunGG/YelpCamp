@@ -2,7 +2,7 @@
 <div class="row">
     <h1 class="text-center">New CampGround</h1>
     <div class="col-6 offset-3">
-        <form action="/campgrounds" method="post" novalidate class="validated-form">
+        <form action="/campgrounds" method="post" novalidate class="validated-form" enctype="multipart/form-data">
             
             <div class="mb-3">
                 <label class="form-label" for="title">Title</label>
@@ -12,7 +12,6 @@
                 </div>
             </div>
             
-            
             <div class="mb-3">
                 <label class="form-label" for="location">Location</label>
                 <input class="form-control" type="text" name="campground[location]" id="location" placeholder="Add Location" required>
@@ -20,7 +19,6 @@
                     Looks good!
                 </div>
             </div>
-            
             
             <div class="mb-3">
                 <label class="form-label" for="price">Campground Price</label>
@@ -32,17 +30,7 @@
                     </div>
                 </div>  
             </div>
-            
-            
-            <div class="mb-3">
-                <label class="form-label" for="image">Image URL</label>
-                <input class="form-control" type="text" name="campground[image]" id="image" placeholder="Add Image URL" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            
-            
+
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
                 <textarea class="form-control" type="text" name="campground[description]" id="description" placeholder="Add Description" required></textarea>
@@ -50,7 +38,14 @@
                     Looks good!
                 </div>
             </div>
-            
+
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Upload Images</label>
+                <input class="form-control" type="file" name="image" id="formFileMultiple" multiple>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
             
             <div class="mb-3">
                 <button class="btn btn-success">Add Campground</button>

@@ -1,3 +1,7 @@
+
+if (process.env.NODE_ENV !== 'production'){
+  require('dotenv').config();
+}
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -8,7 +12,6 @@ const ejsMate = require('ejs-mate');
 const session = require('express-session');
 const flash = require('connect-flash');
 const ExpressError = require('./utils/ExpressError');
-const { campgroundSchema, reviewSchema } = require('./schemas');
 const User = require('./models/user');
 const passport = require('passport');
 const localStrategy = require('passport-local');

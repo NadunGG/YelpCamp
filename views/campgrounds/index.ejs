@@ -1,10 +1,10 @@
-<!-- <% layout('layouts/boilerplate') %> -->
+<% layout('layouts/boilerplate') %>
 
 <div class="container">
   <h1>All Campgrounds</h1>
-  <button class="btn btn-success my-3 d-flex ms-auto" href="/campgrounds/new">
+  <a class="btn btn-success my-3"  href="/campgrounds/new">
     Add Campground
-  </button>
+  </a>
 </div>
 
 
@@ -12,7 +12,7 @@
   <div class="card mb-3">
     <div class="row">
       <div class="col-md-4">
-        <img class="img-fluid" src="<%= campground.image %> " alt="" />
+        <img class="img-fluid" src="<%= campground.images[0]?.url || "https://res.cloudinary.com/dloeidexn/image/upload/v1673281363/YelpCamp/utils/no_image_to_show__unir9h.jpg" %> " alt="No Image" />
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -23,8 +23,8 @@
           </p>
         </div>
         <a class="btn btn-primary" href="campgrounds/<%= campground._id %>">
-          View <%= campground.title %></a
-        >
+          View <%= campground.title %>
+        </a>
       </div>
     </div>
   </div>
