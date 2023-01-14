@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/starability-heart.css">
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-12 col-md-6">
     <div class="card mb-3">
         <div id="campgroundCarousel" class="carousel slide" data-bs-ride="true">
           <div class="carousel-indicators">
@@ -56,7 +56,8 @@
     </div>
   </div>
 
-  <div class="<%= !currentUser ? 'col-6 text-center' : 'col-6' %>">
+  <div class="col-12 col-md-6">
+    <div id='map' class="card mb-3" style='width: 100%; height: 300px;'></div>
     <h2>Leave a Review</h2>
     <% if (currentUser) { %>
     <form
@@ -126,3 +127,9 @@
     <% } %>
   </div>
 </div>
+
+<script>
+  const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
+  const campground = <%- JSON.stringify(campground) %>;
+</script>
+<script src="/javascripts/showPageMap.js"></script>

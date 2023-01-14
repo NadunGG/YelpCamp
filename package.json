@@ -9,6 +9,7 @@
   "author": "Nadun Gunawardana",
   "license": "ISC",
   "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.14.0",
     "axios": "^0.27.2",
     "cloudinary": "^1.33.0",
     "connect-flash": "^0.1.1",

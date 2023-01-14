@@ -20,6 +20,4 @@ module.exports.reviewSchema = Joi.object({
     body: Joi.string().required(),
   }).required(),
 });
-let service = Joi.object().keys({
-  serviceName: Joi.string().required(),
-});
+
