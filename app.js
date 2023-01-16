@@ -58,9 +58,9 @@ const sessionConfig = {
   },
 };
 
-store.onerror('error', function (err) {
-  console.log('Session Store Error: ', err);
-});
+// store.onerror('error', function (err) {
+//   console.log('Session Store Error: ', err);
+// });
 app.use(session(sessionConfig));
 app.use(flash());
 
